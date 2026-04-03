@@ -1,0 +1,45 @@
+.bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22px;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 16px;
+  z-index: 200;
+}
+
+.item {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+/* On mobile, hide verbose status items — keep it lean */
+@media (max-width: 768px) {
+  .bar {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  /* Hide TypeScript label and editor position — too crowded */
+  .item:nth-child(3),
+  .right .item:nth-child(2),
+  .right .item:nth-child(3) {
+    display: none;
+  }
+}

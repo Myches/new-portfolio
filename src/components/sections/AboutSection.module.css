@@ -1,0 +1,247 @@
+.hero {
+  padding: 60px 48px 48px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 255, 135, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.prompt {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.arrow { color: var(--green); }
+.branch { color: var(--blue); }
+.star { color: var(--amber); }
+
+.name {
+  font-family: var(--sans);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.accent { color: var(--green); }
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  background: var(--green);
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.titleRow {
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--text2);
+  background: var(--bg3);
+  font-family: var(--mono);
+}
+
+.badgeGreen {
+  border-color: rgba(0, 255, 135, 0.3);
+  color: var(--green);
+  background: rgba(0, 255, 135, 0.05);
+}
+
+.badgeBlue {
+  border-color: rgba(96, 165, 250, 0.3);
+  color: var(--blue);
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.bio {
+  max-width: 560px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.bio strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-family: var(--mono);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnPrimary {
+  background: var(--green);
+  color: #000;
+  border: 1px solid var(--green);
+  font-weight: 700;
+}
+.btnPrimary:hover {
+  background: var(--green2);
+  border-color: var(--green2);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+}
+.btnGhost:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--bg3);
+}
+
+/* Stats */
+.statsRow {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.statCell {
+  flex: 1;
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.statCell:last-child { border-right: none; }
+
+.statNum {
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text3);
+}
+
+/* Skills */
+.skillsSection {
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.sectionLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.sectionTag {
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+.skillGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.skillGroup {
+  background: var(--bg);
+  padding: 20px;
+}
+
+.skillGroupTitle {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 12px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { padding: 32px 20px 28px; }
+  .skillsSection { padding: 28px 20px; }
+  .statsRow { flex-wrap: wrap; }
+  .statCell { min-width: 50%; }
+}

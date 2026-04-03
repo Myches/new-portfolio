@@ -1,0 +1,51 @@
+.tag {
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  background: var(--bg3);
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.small {
+  font-size: 10px;
+  padding: 2px 6px;
+}
+
+.react {
+  border-color: rgba(96, 165, 250, 0.4);
+  color: var(--blue);
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.next {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ts {
+  border-color: rgba(96, 165, 250, 0.5);
+  color: #7dd3fc;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.green {
+  border-color: rgba(0, 255, 135, 0.3);
+  color: var(--green);
+  background: rgba(0, 255, 135, 0.06);
+}
+
+.amber {
+  border-color: rgba(245, 158, 11, 0.3);
+  color: var(--amber);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.purple {
+  border-color: rgba(167, 139, 250, 0.3);
+  color: var(--purple);
+  background: rgba(167, 139, 250, 0.06);
+}

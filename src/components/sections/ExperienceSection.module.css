@@ -1,0 +1,152 @@
+.wrapper {
+  padding: 40px 48px 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.sectionLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.sectionTag {
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+/* Terminal */
+.terminal {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.terminalHeader {
+  background: var(--bg3);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.termDots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+.red { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green { background: #28c840; }
+
+.termTitle {
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--mono);
+}
+
+.termBody {
+  padding: 20px;
+  font-size: 12px;
+  line-height: 2;
+  font-family: var(--mono);
+}
+
+.comment { color: var(--text3); }
+.key { color: var(--blue); }
+.str { color: var(--green); }
+.num { color: var(--amber); }
+
+.prompt {
+  color: var(--text3);
+  margin-top: 16px;
+  display: block;
+}
+
+.cmd { color: var(--text); }
+
+/* Timeline */
+.timeline {
+  padding: 40px 48px;
+}
+
+.expItem {
+  border-left: 2px solid var(--border);
+  padding-left: 24px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.expItem::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 2px solid var(--bg);
+}
+
+.expItem:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.expPeriod {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 4px;
+  font-family: var(--mono);
+}
+
+.expRole {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.expCompany {
+  font-size: 12px;
+  color: var(--green2);
+  margin-bottom: 8px;
+  font-family: var(--mono);
+}
+
+.expDesc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 28px 20px 0; }
+  .timeline { padding: 28px 20px; }
+}

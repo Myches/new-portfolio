@@ -1,0 +1,24 @@
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 38px - 22px);
+}
+
+.main {
+  background: var(--bg);
+  overflow-y: auto;
+  height: calc(100vh - 38px - 22px);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    /* full viewport height minus WindowChrome (38px) and StatusBar (22px) */
+    height: calc(100vh - 38px - 22px);
+    /* prevent content hiding behind MobileNav (56px) + StatusBar (22px) */
+    padding-bottom: 78px;
+  }
+}

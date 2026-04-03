@@ -1,0 +1,182 @@
+.sidebar {
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 38px;
+  height: calc(100vh - 38px - 22px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+
+.section {
+  border-bottom: 1px solid var(--border);
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding: 12px 12px 8px;
+  user-select: none;
+}
+
+/* labelRow — label + toggle side by side */
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px;
+}
+
+.gitToggle {
+  display: flex;
+  gap: 2px;
+}
+
+.toggleBtn {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toggleBtn:hover { color: var(--text2); }
+
+.toggleActive {
+  color: var(--green);
+  border-color: rgba(0,255,135,0.25);
+  background: rgba(0,255,135,0.06);
+}
+
+.tree {
+  padding: 4px 0 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 24px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--text2);
+  transition: all 0.1s;
+  border-left: 2px solid transparent;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.item.active {
+  color: var(--green);
+  border-left-color: var(--green);
+  background: rgba(0, 255, 135, 0.05);
+}
+
+.folder {
+  padding-left: 12px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 11px;
+  cursor: default;
+}
+.folder:hover { background: transparent; color: var(--text); }
+
+.icon { font-size: 11px; flex-shrink: 0; }
+
+/* Git status colours */
+.modified  { color: var(--amber) !important; }
+.untracked { color: var(--blue)  !important; }
+.added     { color: var(--green) !important; }
+
+/* Git status letter badge */
+.gitStatus {
+  font-size: 9px;
+  font-weight: 700;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.gitBranch {
+  font-size: 10px;
+  color: var(--text3);
+  padding: 2px 12px 6px 24px;
+  font-family: var(--mono);
+}
+
+/* Git log entries */
+.logEntry {
+  display: flex;
+  gap: 8px;
+  padding: 3px 12px 3px 24px;
+  font-size: 11px;
+  font-family: var(--mono);
+  overflow: hidden;
+}
+
+.logHash {
+  color: var(--amber);
+  flex-shrink: 0;
+}
+
+.logMsg {
+  color: var(--text2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Outline symbol types */
+.fn        { color: var(--purple) !important; font-size: 11px !important; }
+.prop      { color: var(--blue)   !important; font-size: 11px !important; }
+.constItem { color: var(--amber)  !important; font-size: 11px !important; }
+
+.kindBadge {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--purple);
+  flex-shrink: 0;
+}
+
+/* Config file preview popover */
+.filePreview {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  overflow-x: auto;
+}
+
+.previewCode {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text2);
+  line-height: 1.6;
+  white-space: pre;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+}

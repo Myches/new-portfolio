@@ -1,0 +1,136 @@
+.wrapper {
+  padding: 40px 48px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.sectionLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.sectionTag {
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+.intro {
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+.available {
+  color: var(--green);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--border);
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--bg2);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: background 0.1s;
+  text-decoration: none;
+}
+
+.card:hover {
+  background: var(--bg3);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+.cardLabel {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 2px;
+  font-family: var(--mono);
+}
+
+.cardValue {
+  font-size: 13px;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+.statusCard {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg2);
+}
+
+.statusComment {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 8px;
+  font-family: var(--mono);
+}
+
+.statusRow {
+  font-size: 12px;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+  flex-shrink: 0;
+}
+
+.highlight {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 28px 20px; }
+  .grid { grid-template-columns: 1fr; }
+}
