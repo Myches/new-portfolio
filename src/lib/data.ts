@@ -57,8 +57,24 @@ export const skills = [
 ];
 
 export const projects = [
-  {
+   {
     id: "01",
+    featured: false,
+    name: "Fluxdev ERP",
+    description:
+      "An ERP with complete manufacturing management solution that integrates production, inventory, finance, and workforce management into one powerful platform. ",
+    stack: [
+      { name: "React js", variant: "next" },
+      { name: "TypeScript", variant: "ts" },
+      { name: "Tailwind", variant: "purple" },
+      { name: "MDX", variant: "green" },
+    ],
+    status: "wip" as const,
+    demoUrl: "https://erp.fluxdevs.com/",
+    codeUrl: "https://github.com/FluxDevsTeam/ERP_Frontend ",
+  },
+  {
+    id: "02",
     featured: true,
     name: "Kids Design Company",
     description:
@@ -74,7 +90,7 @@ export const projects = [
     codeUrl: "https://github.com/FluxDevsTeam/KidsDesignEcommerceFrontend",
   },
   {
-    id: "02",
+    id: "03",
     featured: false,
     name: "Reform Teachers",
     description:
@@ -89,22 +105,7 @@ export const projects = [
     demoUrl: "https://reformedteachers.netlify.app/ ",
     codeUrl: "https://github.com/FluxDevsTeam/reformed_teachers",
   },
-  {
-    id: "03",
-    featured: false,
-    name: "Devlinks",
-    description:
-      "A link-sharing web app built with Next js and Typescript that allows users to upload and share their details ",
-    stack: [
-      { name: "Next.js", variant: "next" },
-      { name: "TypeScript", variant: "ts" },
-      { name: "Tailwind", variant: "purple" },
-      { name: "MDX", variant: "green" },
-    ],
-    status: "wip" as const,
-    demoUrl: "https://linksters.netlify.app/ ",
-    codeUrl: "https://github.com/Myches/linksters ",
-  },
+ 
 ];
 
 export const experience = [
