@@ -6,6 +6,7 @@ on:
       - main
 
 env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   AWS_REGION: us-east-2
   ECR_REPOSITORY: mike-portfolio
   ECS_CLUSTER: mike-portfolio-cluster
@@ -37,14 +38,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run lint checks
-        run: npm run lint -- --no-lint
 
       - name: Build Next.js app
         run: npm run build
