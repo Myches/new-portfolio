@@ -11,7 +11,7 @@ interface MobileNavProps {
 const tabs: { id: TabId; label: string; icon: string }[] = [
   { id: "about",      label: "About",      icon: "⚛" },
   { id: "projects",   label: "Projects",   icon: "📦" },
-  { id: "experience", label: "Experience", icon: "{🔄}" },
+  { id: "experience", label: "Experience", icon: "🔄" },
   { id: "contact",    label: "Contact",    icon: "✉" },
 ];
 
